@@ -1,0 +1,373 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*NORM*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*VARIABLES*/
+:root{
+    /*colores*/
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --grisOscuro: #666;
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    /*fontsize*/
+    --text:1.2em;
+    --desc:1.6em;
+    --precios:1.8em;
+    --titular:2.4em;
+}
+
+/*HEADER*/
+header {
+    background-color: var(--amarillo);
+    font-size: var(--text);
+    padding: 5% 5% 2% 5%;
+}
+
+
+/*LOGO*/
+.logo {
+    display: block;
+    width: 50%;
+    max-width: 200px;
+    padding: 0px 10px 10px 0px;
+}
+
+/*BARRA DE BÚSQUEDA*/
+.topnav input {
+    border-style: solid;
+    border-color: var(--grisClaro);
+    padding: 0.2em;
+    width: 100%
+}
+.topnav button {
+    background: var(--grisClaro);
+    border-style: solid;
+    border-color: var(--grisClaro);
+    cursor: pointer;
+    padding: 0.5em;
+  }
+.topnav {
+    display:flex;
+    width: 50%;
+}
+.topheader {
+    display: flex;
+    align-items: center;
+}
+/*"EN CUOTAS Y SIN TARJETA DE CRÉDITO"*/
+.anuncio {
+    text-align: center;
+    padding: 10px 0px 10px 10px;
+    font-size: var(1em);
+}
+
+/*BARRA DE NAV*/
+.rightnav, .leftnav {
+    list-style: none;
+    margin:0;
+    padding: 0%;
+}
+.rightnav a, .leftnav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0px;
+}
+.topbar {
+    display: none;
+}
+
+/*HAMBURGUESA*/
+.burger-menu {
+    text-align: center;
+    display: block;
+}
+div.burger-menu i {
+    border-radius: 5%;
+    padding: 1em 1em;
+    color: var(--grisClaro);
+    background-color: var(--celeste);
+}
+
+/*MAIN*/
+main {
+    background-color: var(--grisClaro);
+    border-top: solid 1px;
+    display: block;
+}
+.descri {
+    padding-top: 15px;
+}
+main section article{
+    display: block;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    margin-top: 10px;
+    background-color: white;
+}
+main h2 {
+    margin-left: 5%;
+    margin-top: 30px;
+    color: var(--grisOscuro);
+}
+main img {
+    width: 100%;
+}
+main i {
+    color: var(--verde);
+    font-size: var(--titular);
+    margin-left: 80%;
+    border: 1px solid var(--verde);
+    padding: 8px;
+    border-radius: 50%;
+}
+main div div{
+    display: flex;
+    align-items: center;
+}
+.inf{
+    padding-bottom: 4%;
+}
+
+.precio, .descri {
+    margin-left: 5%;
+}
+.descuento{
+    margin-left: 2%;
+}
+.descri {
+    color: var(--grisOscuro);
+}
+/*FOOTER*/
+footer section{
+    text-align: center;
+}
+footer h3 {
+    font-size:var(--precios);
+}
+footer section article{
+    padding: 2em;
+    width: 90%;
+    margin: auto;
+}
+footer section i{
+    color: var(--celeste);
+    font-size: 2em;
+}
+
+
+
+/*TAMAÑO DE FUENTES*/
+p {
+    font-size: var(--text);
+}
+h2 {
+    font-size: var(--titular);
+}
+.precio {
+    font-size: var(--precios);
+}
+.descuento {
+    font-size: var(--desc);
+    color: var(--verde);
+}
+.descri {
+    font-size: var(--desc);
+}
+
+
+
+/*FLEXBOX*/
+
+/*MEDIA QUERIE*/
+/* 576 - 768 - 992 - 1200 */
+
+/*MÓVIL*/
+.descri {
+    display: none;
+}
+
+/*TABLETS*/
+@media screen and (min-width: 768px) {
+    /*VISUALIZACION*/
+    .topbar{
+        display: block;
+    }
+    .burger-menu{
+        display: none;
+    }
+
+    /*LOGO-BÚSQUEDA-ANUNCIO*/
+    .completop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .topnav, .logo {
+        width: 40vw;
+    }
+    .topnav{
+        max-height: 5vh;
+    }
+
+    /* BARRA DE NAVEGACIÓN */
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .topbar ul{
+        display: flex;
+    }
+    .topbar ul li{
+        margin: 0 10px;
+    }
+
+    /*FLEXBOX PRODUCTOS*/
+    main section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main section article {
+        width: 40vw;
+        margin: 5%;
+    }
+    
+    /*AJUSTE EXTRA*/
+    main i{
+        margin-left: 80%;
+    }
+    header{
+        padding-top: 3%;
+    }
+
+    /*ANIMACIONES*/
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 1024px){
+    /*FOOTER*/
+    footer section{
+        display: flex;
+        align-content: space-between;
+    }
+    /*FLEXBOX PRODUCTOS*/
+    main section article {
+        max-width: 20vw;
+        margin: 1% 2.3% 3% 2.3%;
+    }
+
+    /*EXTRA*/
+    main i {
+        margin-left: 75%;
+        font-size: var(--precios);
+    }
+    main h2{
+        margin-left: 2.5%;
+    }
+
+    /*HOVER HOME*/
+    .descri{
+        display:block;
+        color: white;
+    }
+    main section article:hover .descri{
+        color:black
+    }
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .inf i{
+        position: relative;
+        transition: all 400ms;
+    }
+    main section article:hover .inf i{
+        transform: rotate(-90deg);
+    }
+
+    /*HOVER LOGIN*/
+    .butt{
+        position: relative;
+        transition: all 400ms;
+    }
+    .butt:hover{
+        background-color: #0022aa;
+    }
+}
+
+/*REGISTER*/
+main form{
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 2vw;
+    max-width: 700px;
+}
+main form div{
+    margin: 3vw 0;
+}
+.bar{
+    width: 100%;
+    padding: 8px;
+    border: none;
+}
+.interests{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.profile label, .interests label{
+    margin: 7px 0;
+    font-size: var(--text);
+}
+.profile label, .profile label input{
+    margin-right: 10px ;
+}
+form button{
+    float: center;
+    width: 45%;
+    padding: 8px;
+    background-color: var(--celeste);
+    color: var(--grisClaro);
+    border:none;
+    border-radius: 5%;
+    margin: 0 1vw 5vw 1vw;
+}
+.formtxt{
+    font-size: var(--desc);
+    margin-bottom: 10px;
+}
+
+
+
+/*LOGIN*/
+.login{
+    width: 90%;
+    margin: 4vw auto;
+    max-width: 700px;
+}
+.login input{
+    margin: 2vw 0;
+    max-height: 50px;
+}
+.butt{
+    padding: 8px;
+    background-color: var(--celeste);
+    color: var(--grisClaro);
+    border:none;
+    border-radius: 5%;
+    width: 100%;
+    margin: 2vw 0;
+}
