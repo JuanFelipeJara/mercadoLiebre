@@ -166,6 +166,7 @@ footer section article{
 footer section i{
     color: var(--celeste);
     font-size: 2em;
+    margin-bottom: 10px;
 }
 
 
@@ -335,7 +336,7 @@ main form div{
 .profile label, .profile label input{
     margin-right: 10px ;
 }
-form button{
+.butt1{
     float: center;
     width: 45%;
     padding: 8px;
